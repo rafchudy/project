@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <h1>Dodawanie produktu do listy</h1>
+        <form action="/addProduct">
+            <div class="col-9">
+                <label>Podaj kod EAN: </label>
+            </div>
+            <div>
+                <input name="code" type="number" required/>
+            </div>
+            <div class="col-4">
+                <label>Podaj ilość: </label>
+            </div>
+            <div>
+                <input name="quantity" type="number" required/>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Dodaj</button>
+            </div>
+        </form>
+        <form action="/showProduct">
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Pokaż produkty</button>
+            </div>
+        </form>
+       <!-- <form action="/showMyList">
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Pokaż listy</button>
+            </div>
+        </form>-->
+    </div>
+</div>
+</body>
+</html>

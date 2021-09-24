@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Wprowadzone produkty</h1>
+
+<div>
+    <table>
+
+        <th:block th:each="produkty : ${nameProductDatabase}">
+            <tr >
+                <td th:text="${produkty.toString()}"></td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+<div>
+    <form action="/">
+        <div class="col-3">
+            <button type="submit" class="btn btn-primary">Strona główna</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
